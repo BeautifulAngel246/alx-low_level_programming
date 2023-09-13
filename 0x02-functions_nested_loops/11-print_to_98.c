@@ -3,43 +3,22 @@
 #include <stdio.h>
 
 /**
- * print_to_98 - print a program to 98
- * @n: The number to start printing
- * Retun: Always 0
+ * print_to_98 - print all natural numbers from n to 98
+ *
+ * @n: starting point
+ *
+ * Return: returns 0
+ *
  */
-
 void print_to_98(int n)
 {
 	if (n <= 98)
 	{
-	for (; n <= 98; n++)
-	{
-	if (n == 98)
-	{
-	printf("% d", n);
-	printf("\n");
-	break;
+		for (n = n; n <= 97; n++)
+			printf("% d, ",  n);
 	}
 	else
-	{
-	printf("% d", n);
-	}
-	}
-	}
-	else
-	{
-	for (; n >= 98; n--)
-	{
-		if (n == 98)
-		{
-			printf("% d", n);
-			printf("\n");
-			break;
-		}
-		else
-		{
-		printf("% d", n);
-	}
-	}
-}
+		for (n = n; n > 98; n--)
+			printf("% d, ", n);
+	printf("98 \n");
 }
